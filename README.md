@@ -7,8 +7,17 @@ Ich habe hier ein paar spannende Analysen und Visualisierungen erstellt.
 
 Scheiss auf Stürmer, wir spielen 5-4-1 mit Marvin Hitz odr Brecher!
 
-Schaue diese zwei grafiken an 
-und das Ende:
+Schaue diese zwei grafiken an:
+
+[Total Points vs Price](https://pfeigenwi.github.io/20minfantasy/vega_tot.html)
+ 
+[Average Points vs Price](https://pfeigenwi.github.io/20minfantasy/vega_avg.html)
+
+
+Hier kannst du selbst filtern: 
+[data.html](https://pfeigenwi.github.io/20minfantasy/data.html)
+
+Und unten findest du das [perfekte Team](#-das-perfekte-team).
 
 ## Datenbasis
 
@@ -118,24 +127,17 @@ Hier tauchen interessante **Neuzugänge** wie *Otele* und *Fassnacht* auf.
 Erneut zeigt sich: **Stürmer liefern kaum Value**, während nun **Mittelfeldspieler und Verteidiger** klar dominieren.
 
 
+➡️ [Zur interaktiven Tabelle mit allen Spielern (nur erste 30)](./players.html)
 
 
-FOglende Zwei grafiken helfen euch, alle Spieler zu untersuchen. 
+## 🔍 Interaktive Charts
 
+Die folgenden interaktiven Grafiken helfen dir beim Erkunden aller Spieler.
 
-Wenn Ihr selbst noch suchen / filtern wollt, hier habt ihr alle SPieler:
+[Total Points vs Price](https://pfeigenwi.github.io/20minfantasy/vega_tot.html)
+ 
+[Average Points vs Price](https://pfeigenwi.github.io/20minfantasy/vega_avg.html)
 
-< Tabelle mit allen Spielern. mit diesen col, alle sortierbar und filterbar: 
-
-'firstName', 'lastName',position', totalPoints, 'minutesPlayed' ,'averagePoints', 'price', 'totalPoints_per_price', 'averagePoints_per_price'
-
-Zeigen nur die ersten 30 entries. >
-
-
-Die folgenden Abbildungen helfen euch, eures Team zu picken. 
-
-
---> Zwei  HTML files..
 
 
 ## 🧠 Das perfekte Team
@@ -231,7 +233,7 @@ Das bedeutet:
 | 	D. Rrudhani|MID 	| 	7.5 |	4.8 |	150 |	2189|
 
 
-### 🔝Top 12 nach Average Points (min. 900 Minuten)
+### 🔝 Top 12 nach Average Points (min. 900 Minuten)
 
 **Kosten:** 88.00 Mio  
 **Average Points (Schnitt):** 5.07
