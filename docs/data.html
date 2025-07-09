@@ -42,15 +42,17 @@
                 const tableBody = $('#players tbody');
                 rows.forEach(row => {
                     const cols = row.split(',');
+                    cols.shift(); // remove the index column (first empty field)
+
                     tableBody.append(`<tr>
                         <td>${cols[2]}</td>  <!-- firstName -->
                         <td>${cols[3]}</td>  <!-- lastName -->
                         <td>${cols[5]}</td>  <!-- position -->
                         <td>${cols[11]}</td> <!-- totalPoints -->
-                        <td>${cols[15]}</td> <!-- minutesPlayed -->
-                        <td>${cols[8]}</td>  <!-- averagePoints -->
+                        <td>${cols[17]}</td> <!-- minutesPlayed -->
+                        <td>${cols[9]}</td>  <!-- averagePoints -->
                         <td>${cols[6]}</td>  <!-- price -->
-                        <td>${cols[39]}</td> <!-- totalPoints_per_price -->
+                        <td>${cols[41]}</td> <!-- totalPoints_per_price -->
                         <td>${cols[40]}</td> <!-- averagePoints_per_price -->
                     </tr>`);
                 });
@@ -58,8 +60,8 @@
                 $('#players').DataTable({
                     columnDefs: [
                         {
-                            targets: 2,      // column index for "position"
-                            orderable: false // disable sorting for this column
+                            targets: 2,      // "position" column
+                            orderable: false
                         }
                     ]
                 });
