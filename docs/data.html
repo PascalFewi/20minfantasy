@@ -10,22 +10,22 @@
         table { width: 100%; }
     </style>
 </head>
-<body>
-    <h2>🔍 Alle Spieler – sortierbar & filterbar</h2>
+<body><h1>20 Min Fantasy - Spieler</h1>
+    <h3>🔍 Alle Spieler – sortierbar & filterbar mit der Search-Bar rechts.</h3>
     <p>Nur die ersten 100 Spieler werden angezeigt.</p>
 
     <table id="players" class="display">
         <thead>
             <tr>
-                <th>firstName</th>
-                <th>lastName</th>
-                <th>position</th>
-                <th>totalPoints</th>
-                <th>minutesPlayed</th>
-                <th>averagePoints</th>
-                <th>price</th>
-                <th>totalPoints_per_price</th>
-                <th>averagePoints_per_price</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Pos</th>
+                <th>Total Punkte</th>
+                <th>Min gespielt</th>
+                <th>Ø Punkte</th>
+                <th>Preis</th>
+                <th>Total Punkte / Preis</th>
+                <th>Ø Punkte / Preis</th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -38,7 +38,7 @@
         fetch('data.csv')
             .then(response => response.text())
             .then(text => {
-                const rows = text.trim().split('\n').slice(1, 101); // skip header, take 100
+                const rows = text.trim().split('\n').slice(1, 201); // skip header, take 100
                 const tableBody = $('#players tbody');
                 rows.forEach(row => {
                     const cols = row.split(',');
