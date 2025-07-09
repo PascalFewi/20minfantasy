@@ -38,7 +38,7 @@
         fetch('data.csv')
             .then(response => response.text())
             .then(text => {
-                const rows = text.trim().split('\n').slice(1, 201); // skip header, take 100
+                const rows = text.trim().split('\n').slice(1); // skip header, take 100
                 const tableBody = $('#players tbody');
                 rows.forEach(row => {
                     const cols = row.split(',');
@@ -52,8 +52,8 @@
                         <td>${cols[17]}</td> <!-- minutesPlayed -->
                         <td>${cols[9]}</td>  <!-- averagePoints -->
                         <td>${cols[6]}</td>  <!-- price -->
-                        <td>${cols[41]}</td> <!-- totalPoints_per_price -->
-                        <td>${cols[40]}</td> <!-- averagePoints_per_price -->
+                        <td>${cols[40]}</td> <!-- totalPoints_per_price -->
+                        <td>${cols[39]}</td> <!-- averagePoints_per_price -->
                     </tr>`);
                 });
 
