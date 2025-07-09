@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>20min Fantasy – Spielerübersicht</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <style>
+        body { font-family: sans-serif; padding: 2rem; }
+        h2 { margin-bottom: 1rem; }
+        table { width: 100%; }
+    </style>
+</head>
+<body>
+    <h2>🔍 Alle Spieler – sortierbar & filterbar</h2>
+    <p>Nur die ersten 30 Spieler werden angezeigt.</p>
+
+    <table id="players" class="display">
+        <thead>
+            <tr>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>position</th>
+                <th>totalPoints</th>
+                <th>minutesPlayed</th>
+                <th>averagePoints</th>
+                <th>price</th>
+                <th>totalPoints_per_price</th>
+                <th>averagePoints_per_price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            fetch('data.csv')
+                .then(response => response.text())
+                .then(text => {
+                    const rows = text.trim().split('\n').slice(1, 31); // skip header, take 30
+                    const tableBody = $('#players tbody');
+                    rows.forEach(row => {
+                        const cols = row.split(',');
+                        tableBody.append(`<tr>
+                            <td>${cols[2]}</td>  <!-- firstName -->
+                            <td>${cols[3]}</td>  <!-- lastName -->
+                            <td>${cols[5]}</td>  <!-- position -->
+                            <td>${cols[11]}</td> <!-- totalPoints -->
+                            <td>${cols[15]}</td> <!-- minutesPlayed -->
+                            <td>${cols[8]}</td>  <!-- averagePoints -->
+                            <td>${cols[6]}</td>  <!-- price -->
+                            <td>${cols[39]}</td> <!-- totalPoints_per_price -->
+                            <td>${cols[40]}</td> <!-- averagePoints_per_price -->
+                        </tr>`);
+                    });
+                    $('#players').DataTable();
+                });
+        });
+    </script>
+</body>
+</html>
