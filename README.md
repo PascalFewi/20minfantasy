@@ -9,13 +9,13 @@ Scheiss auf Stürmer, wir spielen 5-4-1 mit Marvin Hitz odr Brecher!
 
 Schaue diese zwei grafiken an:
 
-[Total Points vs Price](https://pfeigenwi.github.io/20minfantasy/vega_tot.html)
+[Total Points vs Price](https://pascalfewi.github.io/20minfantasy/vega_tot.html)
  
-[Average Points vs Price](https://pfeigenwi.github.io/20minfantasy/vega_avg.html)
+[Average Points vs Price](https://pascalfewi.github.io/20minfantasy/vega_avg.html)
 
 
 Hier kannst du selbst filtern: 
-[data.html](https://pfeigenwi.github.io/20minfantasy/data.html)
+[data.html](https://pascalfewi.github.io/20minfantasy/data.html)
 
 Und unten findest du das [perfekte Team](#-das-perfekte-team).
 
